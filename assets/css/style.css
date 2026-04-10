@@ -197,6 +197,9 @@ strong { color: var(--white); font-weight: 500; }
 .nav__burger.open span:nth-child(2) { opacity: 0; }
 .nav__burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+/* hidden by default on desktop */
+.nav__mobile { display: none; }
+
 @media(max-width:900px) {
   .nav__links, .nav__cta { display: none; }
   .nav__burger { display: flex; }
