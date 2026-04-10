@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Maître Sylvie Barrucand, avocat à Annecy. Cabinet au 2 Bis Avenue de Brogny, 74000 Annecy.">
+  <title>Contact — Maître Sylvie Barrucand</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<nav class="nav scrolled">
+  <a href="index.html" class="nav__brand">
+    <div class="nav__monogram">SB</div>
+    <div class="nav__name">Maître Sylvie Barrucand<span>Avocat à Annecy</span></div>
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="domaines.html">Domaines</a></li>
+    <li><a href="parcours.html">Parcours</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav__cta">Consultation</a>
+  <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav__mobile">
+  <a href="index.html">Accueil</a>
+  <a href="domaines.html">Domaines</a>
+  <a href="parcours.html">Parcours</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="nav__cta-mobile">Consultation</a>
+</div>
+
+<!-- ── Page Hero ── -->
+<section class="contact-hero">
+  <div class="contact-hero__bg">
+    <svg viewBox="0 0 1440 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,400 L0,270 L100,190 L220,250 L340,150 L460,220 L580,110 L700,180 L800,90 L900,155 L1000,80 L1100,145 L1200,95 L1320,160 L1440,120 L1440,400 Z" fill="rgba(78,201,192,.03)"/>
+      <path d="M0,400 L0,310 L160,260 L300,295 L460,240 L600,275 L740,220 L880,260 L1020,210 L1160,250 L1300,225 L1440,255 L1440,400 Z" fill="rgba(78,201,192,.055)"/>
+    </svg>
+    <div class="contact-hero__glow"></div>
+  </div>
+  <div class="container contact-hero__content">
+    <span class="eyebrow reveal">Prise de contact</span>
+    <h1 class="reveal">Contactez<br><em>le Cabinet</em></h1>
+    <p class="reveal">Maître Barrucand vous reçoit à son cabinet d'Annecy sur rendez-vous.<br>Décrivez votre situation, nous vous répondrons dans les meilleurs délais.</p>
+  </div>
+</section>
+
+<!-- ── Main Contact Layout ── -->
+<section class="section contact-main">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div class="contact-form-wrap reveal-left">
+        <span class="eyebrow">Formulaire de contact</span>
+        <h2>Envoyez<br><em>votre message</em></h2>
+        <p class="contact-form-intro">Décrivez brièvement votre situation et l'objet de votre demande. Toutes les informations transmises sont confidentielles.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom <span>*</span></label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+              <span class="form-error">Champ requis</span>
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom <span>*</span></label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+              <span class="form-error">Champ requis</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Adresse e-mail <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="votre@email.fr" required autocomplete="email">
+            <span class="form-error">Adresse e-mail invalide</span>
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="domaine">Domaine concerné</label>
+            <div class="select-wrap">
+              <select id="domaine" name="domaine">
+                <option value="">Sélectionnez un domaine</option>
+                <option value="famille">Droit de la famille</option>
+                <option value="travail">Droit du travail</option>
+                <option value="civil">Droit civil</option>
+                <option value="autre">Autre</option>
+              </select>
+              <svg class="select-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Votre message <span>*</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="Décrivez brièvement votre situation juridique..." required></textarea>
+            <span class="form-error">Champ requis</span>
+          </div>
+
+          <div class="form-group form-group--check">
+            <label class="check-label">
+              <input type="checkbox" id="rgpd" name="rgpd" required>
+              <span class="check-custom"></span>
+              <span>J'accepte que mes données soient utilisées pour traiter ma demande, conformément au <a href="#" style="color:var(--glacier)">Règlement Général sur la Protection des Données</a>.</span>
+            </label>
+            <span class="form-error">Veuillez accepter</span>
+          </div>
+
+          <button type="submit" class="btn form-submit">
+            <span>Envoyer le message</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+
+          <div class="form-success" id="form-success" hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.1V12a10 10 0 11-5.9-9.1"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Message envoyé. Nous vous répondrons dans les meilleurs délais.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar info -->
+      <div class="contact-sidebar reveal-right">
+
+        <div class="contact-info-block">
+          <h4>Coordonnées du cabinet</h4>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span>Adresse</span>
+                <a href="https://maps.google.com/?q=2+Bis+Avenue+de+Brogny+74000+Annecy" target="_blank" rel="noopener">
+                  2 Bis Avenue de Brogny<br>74000 Annecy
+                </a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0122 16.9z"/></svg>
+              </div>
+              <div>
+                <span>Téléphone</span>
+                <a href="tel:0450527051">04 50 52 70 51</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0122 16.9z"/></svg>
+              </div>
+              <div>
+                <span>Fax</span>
+                <span style="color:var(--silver)">04 50 45 95 31</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span>E-mail</span>
+                <a href="mailto:barrucandavocat@free.fr">barrucandavocat@free.fr</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hours">
+          <h4>Horaires d'ouverture</h4>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span>Lundi — Vendredi</span>
+              <span>9h00 — 18h00</span>
+            </div>
+            <div class="hours-row">
+              <span>Samedi</span>
+              <span>Sur rendez-vous</span>
+            </div>
+            <div class="hours-row hours-row--closed">
+              <span>Dimanche</span>
+              <span>Fermé</span>
+            </div>
+          </div>
+          <p class="hours-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            Les consultations ont lieu sur rendez-vous uniquement.
+          </p>
+        </div>
+
+        <div class="contact-bar-info">
+          <span class="eyebrow" style="margin-bottom:14px;">Barreau</span>
+          <p>Barreau d'Annecy</p>
+          <p style="margin-top:4px; font-size:.78rem; color:var(--muted);">Inscription n° — SIRET 394 703 565 00017</p>
+          <p style="margin-top:4px; font-size:.78rem; color:var(--muted);">Admis le 14 décembre 1993</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Map ── -->
+<section class="map-section">
+  <div class="map-header">
+    <div class="container">
+      <span class="eyebrow reveal">Localisation</span>
+      <h2 class="reveal">Le cabinet à <em>Annecy</em></h2>
+    </div>
+  </div>
+  <div class="map-wrap reveal">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=6.115%2C45.896%2C6.135%2C45.908&amp;layer=mapnik&amp;marker=45.9016%2C6.125"
+      width="100%" height="480"
+      style="border:0; display:block; filter:grayscale(60%) contrast(1.1) brightness(0.8);"
+      loading="lazy"
+      title="Cabinet Sylvie Barrucand — 2 Bis Avenue de Brogny, 74000 Annecy"
+      allowfullscreen>
+    </iframe>
+    <div class="map-overlay-card">
+      <div class="map-overlay-card__icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <strong>Cabinet Sylvie Barrucand</strong>
+        <span>2 Bis Avenue de Brogny</span>
+        <span>74000 Annecy</span>
+        <a href="https://maps.google.com/?q=2+Bis+Avenue+de+Brogny+74000+Annecy" target="_blank" rel="noopener" class="map-directions">
+          Itinéraire
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="section faq-section">
+  <div class="container">
+    <div class="faq-header reveal text-center" style="margin-bottom:60px;">
+      <span class="eyebrow">Informations pratiques</span>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item card reveal">
+        <h4>Comment se déroule une première consultation ?</h4>
+        <p>La première consultation a lieu sur rendez-vous au cabinet. Maître Barrucand analyse votre situation, vous informe sur vos droits et vous présente les options envisageables. Les honoraires sont fixés lors de cette première rencontre.</p>
+      </div>
+      <div class="faq-item card reveal">
+        <h4>Quels sont les honoraires ?</h4>
+        <p>Les honoraires sont fixés librement entre l'avocat et son client, en fonction de la nature et de la complexité du dossier. Maître Barrucand s'engage à une transparence totale sur les coûts dès la première consultation.</p>
+      </div>
+      <div class="faq-item card reveal">
+        <h4>L'aide juridictionnelle est-elle acceptée ?</h4>
+        <p>Oui, Maître Barrucand accepte les dossiers au titre de l'aide juridictionnelle, permettant aux personnes aux ressources limitées de bénéficier d'une défense de qualité.</p>
+      </div>
+      <div class="faq-item card reveal">
+        <h4>Dans quelle zone géographique interviendrez-vous ?</h4>
+        <p>Le cabinet intervient principalement à Annecy et en Haute-Savoie, devant le Tribunal Judiciaire d'Annecy, le Conseil de Prud'hommes et la Cour d'Appel de Chambéry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Cabinet Sylvie Barrucand</div>
+        <p class="footer__desc">Avocat au Barreau d'Annecy depuis 1993. Droit de la famille, droit du travail, droit civil.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="domaines.html">Domaines</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:0450527051">04 50 52 70 51</a></li>
+          <li><a href="mailto:barrucandavocat@free.fr">barrucandavocat@free.fr</a></li>
+          <li><a href="#">2 Bis Av. de Brogny, Annecy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Cabinet Sylvie Barrucand. Tous droits réservés. — SIRET 394 703 565 00017</p>
+      <div class="footer__badge">Barreau d'Annecy · Inscrit le 14/12/1993</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

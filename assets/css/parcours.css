@@ -1,0 +1,279 @@
+/* ============================================================
+   PARCOURS PAGE — Specific Styles
+   ============================================================ */
+
+/* ── Page Hero ── */
+.page-hero--parcours {
+  padding-top: var(--nav-h);
+  padding-bottom: 80px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  min-height: 560px; display: flex; align-items: center;
+}
+.page-hero--parcours__bg {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.page-hero--parcours__bg svg {
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+}
+.page-hero--parcours__glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 15% 60%, rgba(78,201,192,.06) 0%, transparent 60%);
+}
+.page-hero--parcours__inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1.1fr .9fr;
+  gap: 80px; align-items: center;
+}
+.page-hero--parcours__text h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 300; margin: 16px 0 24px; line-height: 1.05;
+}
+.page-hero--parcours__text h1 em { color: var(--glacier); font-style: italic; display: block; }
+.page-hero--parcours__text p { font-size: 1rem; color: var(--silver); max-width: 52ch; line-height: 1.8; }
+
+/* ── Portrait ── */
+.parcours-photo {
+  position: relative;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--bg3);
+  max-width: 380px; margin: 0 auto;
+}
+.parcours-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+  display: block;
+  filter: grayscale(15%) contrast(1.05);
+  transition: transform .8s var(--transition);
+}
+.parcours-photo:hover img { transform: scale(1.03); }
+.parcours-photo.img-fallback {
+  display: flex; align-items: center; justify-content: center;
+}
+.parcours-photo.img-fallback::after {
+  content: 'Maître Sylvie Barrucand';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; color: var(--muted);
+  text-align: center; padding: 24px;
+  position: absolute;
+}
+.parcours-photo__caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(9,13,19,.9), transparent);
+  padding: 32px 20px 16px;
+  display: flex; flex-direction: column;
+}
+.parcours-photo__caption span { font-size: .9rem; color: var(--white); font-family: 'Cormorant Garamond', serif; }
+.parcours-photo__caption em { font-size: .72rem; color: var(--glacier); font-style: normal; letter-spacing: .1em; margin-top: 2px; }
+
+@media(max-width:900px) {
+  .page-hero--parcours__inner { grid-template-columns: 1fr; gap: 40px; }
+  .page-hero--parcours__photo { order: -1; }
+  .parcours-photo { max-width: 280px; }
+}
+
+/* ── Identity Bar ── */
+.identity-bar {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+}
+.identity-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1px; background: var(--border);
+}
+.identity-item {
+  background: var(--bg3); padding: 28px 24px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.identity-item__label {
+  font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--glacier);
+}
+.identity-item__val { font-size: .9rem; color: var(--white); }
+@media(max-width:768px) {
+  .identity-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:480px) {
+  .identity-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Timeline ── */
+.timeline-section { background: var(--bg); }
+.timeline-header { margin-bottom: 80px; }
+.timeline-header h2 em { color: var(--glacier); font-style: italic; }
+
+.timeline {
+  position: relative;
+  max-width: 900px; margin: 0 auto;
+}
+.timeline__line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+  transform: translateX(-50%);
+}
+.timeline__line::before {
+  content: ''; position: absolute; top: 0; left: -3px;
+  width: 7px; height: 7px;
+  background: var(--glacier); border-radius: 50%;
+}
+.timeline__line::after {
+  content: ''; position: absolute; bottom: 0; left: -3px;
+  width: 7px; height: 7px;
+  background: var(--glacier); border-radius: 50%;
+}
+
+.timeline__item {
+  display: grid; grid-template-columns: 1fr 40px 1fr;
+  gap: 0; margin-bottom: 56px; align-items: start;
+  position: relative;
+}
+
+/* Left items: card on left, year on right */
+.timeline__item .timeline__year {
+  padding: 16px 32px 0 0; text-align: right;
+  grid-column: 1; grid-row: 1;
+  align-self: start;
+}
+.timeline__item .timeline__marker {
+  grid-column: 2; grid-row: 1;
+  display: flex; justify-content: center;
+  padding-top: 16px;
+}
+.timeline__item .timeline__card {
+  grid-column: 3; grid-row: 1;
+  margin-left: 32px;
+}
+
+/* Right items: reversed */
+.timeline__item--right .timeline__year {
+  grid-column: 3; grid-row: 1;
+  text-align: left; padding: 16px 0 0 32px;
+}
+.timeline__item--right .timeline__marker {
+  grid-column: 2; grid-row: 1;
+}
+.timeline__item--right .timeline__card {
+  grid-column: 1; grid-row: 1;
+  margin-left: 0; margin-right: 32px;
+  grid-row-start: 1; order: -1;
+}
+
+.timeline__year span {
+  display: block; font-size: .68rem;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 4px;
+}
+.timeline__year strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; color: var(--glacier); font-weight: 400;
+}
+
+.timeline__dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--glacier);
+  transition: background .3s;
+}
+.timeline__marker--milestone .timeline__dot {
+  background: var(--glacier);
+  box-shadow: 0 0 20px rgba(78,201,192,.4);
+}
+.timeline__item:hover .timeline__dot { background: rgba(78,201,192,.3); }
+
+.timeline__card { padding: 28px; }
+.timeline__card--milestone {
+  border-color: var(--border2);
+  background: var(--bg2);
+}
+.timeline__card--milestone::before { height: 100% !important; }
+
+.timeline__card-icon {
+  width: 40px; height: 40px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--glacier); margin-bottom: 16px;
+}
+.timeline__card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; color: var(--white); margin-bottom: 10px;
+}
+.timeline__card p { font-size: .84rem; color: var(--silver); line-height: 1.75; margin-bottom: 16px; }
+.timeline__tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.timeline__tags span {
+  font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 8px; border: 1px solid var(--border); color: var(--muted);
+}
+.timeline__tags .tag--glacier {
+  border-color: var(--glacier); color: var(--glacier);
+}
+
+@media(max-width:700px) {
+  .timeline__line { left: 20px; }
+  .timeline__item,
+  .timeline__item--right {
+    grid-template-columns: 20px 1fr;
+    gap: 0;
+  }
+  .timeline__item .timeline__year,
+  .timeline__item--right .timeline__year {
+    grid-column: 2; text-align: left; padding: 0 0 8px 20px;
+    grid-row: 1;
+  }
+  .timeline__item .timeline__marker,
+  .timeline__item--right .timeline__marker {
+    grid-column: 1; padding-top: 2px;
+  }
+  .timeline__item .timeline__card,
+  .timeline__item--right .timeline__card {
+    grid-column: 2; grid-row: 2;
+    margin: 0 0 0 20px; order: 0;
+  }
+}
+
+/* ── Jurisdictions ── */
+.jur-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+.jur-card { padding: 36px 28px; }
+.jur-card__icon {
+  width: 56px; height: 56px;
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--glacier); margin-bottom: 20px;
+}
+.jur-card h4 { font-size: 1.1rem; margin-bottom: 10px; }
+.jur-card p { font-size: .86rem; margin-bottom: 16px; }
+.jur-card__detail {
+  display: flex; align-items: center; gap: 6px;
+  font-size: .76rem; color: var(--glacier);
+}
+@media(max-width:768px) { .jur-grid { grid-template-columns: 1fr; } }
+
+/* ── Values ── */
+.values-section { background: var(--bg); }
+.values-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 80px; align-items: start;
+}
+.values-text h2 em { color: var(--glacier); font-style: italic; }
+.values-list { display: flex; flex-direction: column; gap: 0; }
+.value-item {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding: 32px 0; border-bottom: 1px solid var(--border);
+}
+.value-item:first-child { border-top: 1px solid var(--border); }
+.value-item__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 300;
+  color: var(--glacier); flex-shrink: 0; width: 24px;
+  text-align: center;
+}
+.value-item h4 { font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 500; color: var(--white); margin-bottom: 8px; }
+.value-item p { font-size: .86rem; color: var(--muted); line-height: 1.75; max-width: none; }
+
+@media(max-width:900px) {
+  .values-grid { grid-template-columns: 1fr; gap: 48px; }
+}

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maître Sylvie Barrucand, Avocat à Annecy. Droit de la famille, droit du travail, droit civil. Barreau d'Annecy depuis 1993.">
+  <meta name="keywords" content="avocat annecy, maître barrucand, droit famille annecy, droit travail annecy, cabinet barrucand">
+  <title>Maître Sylvie Barrucand — Avocat à Annecy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ── Navbar ── -->
+<nav class="nav">
+  <a href="index.html" class="nav__brand">
+    <div class="nav__monogram">SB</div>
+    <div class="nav__name">
+      Maître Sylvie Barrucand
+      <span>Avocat à Annecy</span>
+    </div>
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html" class="active">Accueil</a></li>
+    <li><a href="domaines.html">Domaines</a></li>
+    <li><a href="parcours.html">Parcours</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav__cta">Consultation</a>
+  <button class="nav__burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav__mobile">
+  <a href="index.html">Accueil</a>
+  <a href="domaines.html">Domaines</a>
+  <a href="parcours.html">Parcours</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="nav__cta-mobile">Consultation</a>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero__overlay"></div>
+
+  <!-- Alpine mountain silhouette -->
+  <div class="hero__mountains">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,220 L0,180 L80,140 L160,165 L240,110 L320,150 L400,80 L480,130 L540,60 L600,95 L660,40 L720,75 L780,30 L840,65 L900,45 L960,90 L1020,55 L1080,100 L1140,70 L1200,120 L1280,85 L1360,140 L1440,110 L1440,220 Z" fill="rgba(78,201,192,0.04)"/>
+      <path d="M0,220 L0,195 L120,165 L240,180 L360,145 L480,168 L580,130 L660,155 L740,118 L820,145 L900,125 L980,150 L1060,135 L1160,158 L1280,140 L1440,165 L1440,220 Z" fill="rgba(78,201,192,0.07)"/>
+    </svg>
+  </div>
+
+  <div class="hero__content container">
+    <div class="hero__label reveal">
+      <span class="eyebrow">Barreau d'Annecy · Depuis 1993</span>
+    </div>
+    <h1 class="hero__title reveal">
+      Maître<br>
+      <em>Sylvie Barrucand</em>
+    </h1>
+    <p class="hero__subtitle reveal">Avocat au Barreau d'Annecy, spécialiste en droit de la famille,<br class="d-none-sm"> droit du travail et droit civil.</p>
+    <div class="hero__actions reveal">
+      <a href="domaines.html" class="btn">
+        <span>Domaines d'intervention</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <a href="contact.html" class="btn btn--ghost">
+        <span>Prendre rendez-vous</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__scroll">
+    <div class="hero__scroll-line"></div>
+    <span>Défiler</span>
+  </div>
+</section>
+
+<!-- ── Ticker ── -->
+<div class="ticker">
+  <div class="ticker__track" id="ticker-track">
+    <span class="ticker__item"><span>◆</span> Droit de la Famille</span>
+    <span class="ticker__item"><span>◆</span> Divorce &amp; Séparation</span>
+    <span class="ticker__item"><span>◆</span> Garde d'Enfants</span>
+    <span class="ticker__item"><span>◆</span> Droit du Travail</span>
+    <span class="ticker__item"><span>◆</span> Licenciement</span>
+    <span class="ticker__item"><span>◆</span> Harcèlement</span>
+    <span class="ticker__item"><span>◆</span> Droit Civil</span>
+    <span class="ticker__item"><span>◆</span> Responsabilité Civile</span>
+    <span class="ticker__item"><span>◆</span> Contrats</span>
+    <span class="ticker__item"><span>◆</span> Tribunal Judiciaire d'Annecy</span>
+    <span class="ticker__item"><span>◆</span> Conseil de Prud'hommes</span>
+    <span class="ticker__item"><span>◆</span> Cour d'Appel de Chambéry</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker__item"><span>◆</span> Droit de la Famille</span>
+    <span class="ticker__item"><span>◆</span> Divorce &amp; Séparation</span>
+    <span class="ticker__item"><span>◆</span> Garde d'Enfants</span>
+    <span class="ticker__item"><span>◆</span> Droit du Travail</span>
+    <span class="ticker__item"><span>◆</span> Licenciement</span>
+    <span class="ticker__item"><span>◆</span> Harcèlement</span>
+    <span class="ticker__item"><span>◆</span> Droit Civil</span>
+    <span class="ticker__item"><span>◆</span> Responsabilité Civile</span>
+    <span class="ticker__item"><span>◆</span> Contrats</span>
+    <span class="ticker__item"><span>◆</span> Tribunal Judiciaire d'Annecy</span>
+    <span class="ticker__item"><span>◆</span> Conseil de Prud'hommes</span>
+    <span class="ticker__item"><span>◆</span> Cour d'Appel de Chambéry</span>
+  </div>
+</div>
+
+<!-- ── Stats ── -->
+<section class="section--sm stats-section">
+  <div class="container">
+    <div class="stats-grid" data-stagger>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="32" data-suffix="ans">0</span>
+        <span class="stat__label">d'exercice au Barreau</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="3" data-suffix="">0</span>
+        <span class="stat__label">domaines d'expertise</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="3" data-suffix="">0</span>
+        <span class="stat__label">juridictions couvertes</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="1993" data-suffix="">0</span>
+        <span class="stat__label">année d'inscription</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ── -->
+<section class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image reveal-left">
+        <div class="about-image__frame">
+          <img src="assets/images/sylvie-barrucand.jpg" alt="Maître Sylvie Barrucand, Avocat à Annecy" onerror="this.parentElement.classList.add('img-fallback')">
+          <div class="about-image__badge">
+            <span class="about-image__badge-top">Barreau d'Annecy</span>
+            <span class="about-image__badge-num">1993</span>
+          </div>
+        </div>
+        <!-- Alpine lake decorative element -->
+        <div class="about-deco">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="58" fill="none" stroke="rgba(78,201,192,.12)" stroke-width="1"/>
+            <circle cx="60" cy="60" r="42" fill="none" stroke="rgba(78,201,192,.08)" stroke-width="1" stroke-dasharray="4 6"/>
+            <path d="M20,70 L45,40 L60,55 L75,30 L100,70" stroke="rgba(78,201,192,.2)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="about-text reveal-right">
+        <span class="eyebrow">À propos du cabinet</span>
+        <h2>Un engagement constant<br><em>au service de vos droits</em></h2>
+        <div class="rule"></div>
+        <p>Inscrite au Barreau d'Annecy depuis le 14 décembre 1993, Maître Sylvie Barrucand exerce depuis plus de trente ans une pratique du droit rigoureuse, humaine et engagée. Son cabinet, établi au cœur d'Annecy, accompagne particuliers et professionnels dans les moments les plus sensibles de leur vie juridique.</p>
+        <p class="mt-16">Sa double expertise en droit de la famille et en droit du travail lui permet d'offrir un conseil avisé, une défense déterminée, et une écoute attentive à chaque situation.</p>
+
+        <div class="about-pillars mt-40" data-stagger>
+          <div class="pillar reveal">
+            <div class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3L4 7v5c0 5 4 9.5 8 11 4-1.5 8-6 8-11V7L12 3z"/></svg>
+            </div>
+            <div>
+              <h4>Expertise juridique</h4>
+              <p>Trois décennies de pratique devant les juridictions d'Annecy et de Chambéry.</p>
+            </div>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div>
+              <h4>Disponibilité</h4>
+              <p>Un suivi personnalisé à chaque étape de votre dossier, du conseil au jugement.</p>
+            </div>
+          </div>
+          <div class="pillar reveal">
+            <div class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20H7a2 2 0 01-2-2V6a2 2 0 012-2h7l5 5v9a2 2 0 01-2 2z"/><path d="M9 12h6M9 16h4"/></svg>
+            </div>
+            <div>
+              <h4>Confidentialité</h4>
+              <p>Le secret professionnel absolu, fondement de la relation avocat-client.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="parcours.html" class="btn mt-40">
+          <span>Découvrir le parcours</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Practice Areas Preview ── -->
+<section class="section domains-preview">
+  <div class="container">
+    <div class="text-center mb-40 reveal">
+      <span class="eyebrow">Domaines d'intervention</span>
+      <h2>Une expertise ciblée,<br><em>un conseil sur-mesure</em></h2>
+    </div>
+
+    <div class="domains-grid" data-stagger>
+
+      <div class="domain-card card reveal">
+        <div class="domain-card__number">01</div>
+        <div class="domain-card__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Droit de la Famille</h3>
+        <p>Divorce, séparation, garde d'enfants, pension alimentaire, succession. Une approche à la fois ferme et bienveillante dans les situations les plus délicates.</p>
+        <div class="domain-card__tags">
+          <span>Divorce</span><span>Garde</span><span>Succession</span>
+        </div>
+        <a href="domaines.html#famille" class="domain-card__link">
+          En savoir plus
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+      <div class="domain-card card reveal">
+        <div class="domain-card__number">02</div>
+        <div class="domain-card__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <h3>Droit du Travail</h3>
+        <p>Licenciement abusif, harcèlement moral ou sexuel, rupture conventionnelle, contentieux prud'homal. La défense de vos droits dans la relation de travail.</p>
+        <div class="domain-card__tags">
+          <span>Licenciement</span><span>Harcèlement</span><span>Prud'hommes</span>
+        </div>
+        <a href="domaines.html#travail" class="domain-card__link">
+          En savoir plus
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+      <div class="domain-card card reveal">
+        <div class="domain-card__number">03</div>
+        <div class="domain-card__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="12" y2="17"/></svg>
+        </div>
+        <h3>Droit Civil</h3>
+        <p>Responsabilité civile, droit des contrats, trouble du voisinage, dommages corporels. Le droit commun au service de la protection de vos intérêts.</p>
+        <div class="domain-card__tags">
+          <span>Contrats</span><span>Responsabilité</span><span>Dommages</span>
+        </div>
+        <a href="domaines.html#civil" class="domain-card__link">
+          En savoir plus
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Courts banner ── -->
+<section class="courts-banner">
+  <div class="container">
+    <p class="courts-banner__label reveal">Juridictions</p>
+    <div class="courts-list reveal" data-stagger>
+      <div class="court-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 10v11M16 10v11M12 10v11"/></svg>
+        <span>Tribunal Judiciaire d'Annecy</span>
+      </div>
+      <div class="court-sep">—</div>
+      <div class="court-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 10v11M16 10v11M12 10v11"/></svg>
+        <span>Conseil de Prud'hommes</span>
+      </div>
+      <div class="court-sep">—</div>
+      <div class="court-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 10v11M16 10v11M12 10v11"/></svg>
+        <span>Cour d'Appel de Chambéry</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="cta-box__bg"></div>
+      <div class="cta-box__content">
+        <span class="eyebrow">Premier contact</span>
+        <h2>Vous avez besoin<br><em>d'un conseil juridique ?</em></h2>
+        <p>Contactez le cabinet pour prendre rendez-vous. Maître Barrucand vous accompagne avec rigueur et discrétion dans la défense de vos droits.</p>
+        <div class="cta-box__actions">
+          <a href="contact.html" class="btn">
+            <span>Prendre rendez-vous</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="tel:0450527051" class="cta-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0122 16.9z"/></svg>
+            04 50 52 70 51
+          </a>
+        </div>
+      </div>
+      <!-- Decorative alpine peaks -->
+      <div class="cta-deco">
+        <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,200 L100,80 L180,130 L260,50 L340,100 L420,30 L500,90 L600,60 L600,200 Z" fill="rgba(78,201,192,0.04)"/>
+          <path d="M0,200 L80,120 L160,155 L240,100 L310,140 L380,85 L460,120 L540,95 L600,130 L600,200 Z" fill="rgba(78,201,192,0.06)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Cabinet Sylvie Barrucand</div>
+        <p class="footer__desc">Avocat au Barreau d'Annecy depuis 1993. Droit de la famille, droit du travail, droit civil. Un accompagnement humain et rigoureux pour la défense de vos droits.</p>
+        <div style="margin-top:20px; display:flex; align-items:center; gap:10px;">
+          <div class="nav__monogram" style="width:32px;height:32px;font-size:.9rem;">SB</div>
+          <span style="font-size:.75rem; color:var(--muted); letter-spacing:.1em; text-transform:uppercase;">Barreau d'Annecy</span>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="domaines.html">Domaines</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:0450527051">04 50 52 70 51</a></li>
+          <li><a href="mailto:barrucandavocat@free.fr">barrucandavocat@free.fr</a></li>
+          <li><a href="contact.html">2 Bis Av. de Brogny<br>74000 Annecy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Cabinet Sylvie Barrucand. Tous droits réservés. — SIRET 394 703 565 00017</p>
+      <div class="footer__badge">Barreau d'Annecy · Inscrit le 14/12/1993</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/hero.js"></script>
+</body>
+</html>
